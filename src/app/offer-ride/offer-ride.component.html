@@ -1,0 +1,30 @@
+<div class="pool"><nav>PoolCarZ  <button class="right"  (click)="logout()">Logout</button></nav></div>
+    <br><br>
+<div class="center">
+    <div class="blue">Car Ride Registration Form</div>
+    <br>
+    <div class="middle pad">
+        <form [formGroup]="registerForm">
+            <label for="name">Name</label><br>
+            <input type="text" formControlName="name">
+            <br><br>
+            <label for="Start">Start Location</label><br>
+            <input type="text" formControlName="start">
+            <br><br>
+            <label for="End">Destination</label><br>
+            <input type="text" formControlName="end">
+            <br><br>
+            <label for="Car">Car</label><br>
+            <input type="text" formControlName="Car">
+            <br><br>
+            <label for="seatsLeft">Seats Available</label><br>
+            <input type="number" formControlName="seatsLeft">
+            <p class="red" *ngIf="registerForm.controls['seatsLeft'].errors?.['min'] || registerForm.controls['seatsLeft'].errors?.['max']">Seats should be greater than 0 and less than 8.</p>
+            <br><br>
+            <button [disabled]="(registerForm.controls['seatsLeft'].errors?.['min'] || registerForm.controls['seatsLeft'].errors?.['max']) || rideAdded" class="right-margin" (click)="onSubmit(rideObject)">Submit</button>
+            <button class="goback" (click)="goBack()">Go Back</button>
+        </form>
+    </div>
+    <p *ngIf="rideAdded" class="mid">Added Successfully!</p>
+    
+</div>

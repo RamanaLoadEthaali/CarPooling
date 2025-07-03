@@ -1,0 +1,78 @@
+.center{
+    /* text-align: center; */
+    width: 50%; /* Set a width for the div */
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 1%;
+    /* align-items: center; */
+}
+.right{
+    /* width: 10%;
+    height: 2%;
+    align-self: right;
+    /* color: white;
+    background-color: blue; */
+    /* text-align: right; */
+   /* cursor: pointer; */
+   color: palevioletred;
+    background-color: rgb(96, 229, 200);
+    cursor: pointer;
+    border: 0cap;
+    border-radius: 2px;
+    float: right;
+}
+.pool{
+    padding: 1%;
+    width: 98%;
+    height: 5%;
+    color: palevioletred;
+    background-color: whitesmoke;
+    border: 1%;
+}
+.blue{
+    height: 20%;
+    border-radius: 2%;
+    color: white;
+    background-color: rgb(0, 162, 255);
+    padding: 1%;
+    /* text-align: center; */
+}
+.bulu{
+    color: black;
+    background-color: rgb(0, 162, 255);
+    cursor: pointer;
+    border: 0cap;
+    border-radius: 1%;
+    padding: 1%;
+}
+.left{
+    text-align: left;
+}
+.up{
+    width: 50%; /* Set a width for the div */
+  margin: 0 auto;
+}
+
+.pad{
+    padding: 1%;
+}
+
+.middle{
+    /* width: 50%; */
+    /* transform: translateX(50%); */
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ng-valid[required]  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+
+.required{
+    color: red;
+}
+  

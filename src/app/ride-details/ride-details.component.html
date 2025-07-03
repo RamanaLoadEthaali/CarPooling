@@ -1,0 +1,19 @@
+<table class="table" border="1">
+    <thead class="blue">
+        <tr><td colspan="7">Ride Detail</td></tr>
+    </thead>
+    <tbody>
+       <div class="pad">
+        <table class="table" border="1">
+            <tr><td><strong>id</strong></td><td><strong>name</strong></td><td><strong>Offer Id</strong></td><td><strong>Car</strong></td><td><strong>Seats Left</strong></td><td><strong>Pickup</strong></td><td><strong>Drop</strong></td></tr>
+            <tr><td>{{selectedride.id}}</td><td>{{selectedride.name}}</td><td>{{selectedride.offerId}}</td><td>{{selectedride.car}}</td><td>{{selectedride.seatsLeft}}</td><td>{{selectedride.pickUp}}</td><td>{{selectedride.destination}}</td></tr>
+        </table>
+        <br>
+        <p *ngIf="warning" style="color: red;">Cannot book your own ride!</p>
+        <button *ngIf="!isBooked" (click)="book()" class="book">Book!</button>
+        <p *ngIf="isBooked">Booking done. Your booking id : {{selectedride.id}}</p>
+        <button *ngIf="isBooked" (click)="cancel()" class="cancel">Cancel Booked Ride</button>
+       </div>
+    </tbody>
+    
+</table>

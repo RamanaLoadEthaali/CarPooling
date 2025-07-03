@@ -1,0 +1,28 @@
+<div class="pool"><nav>PoolCarZ  <!--button class="right" *ngIf="isAuthenticated" (click)="logout()">Logout</button--></nav></div>
+    <br><br>
+<div class="pad">
+    
+
+    <form [formGroup]="loginForm">
+        <div class="center">
+            <div class="blue">Login</div><br>
+        <div class="up">
+            <label for="username">Username: </label>
+            <input name="username" [(ngModel)]="username" type="text" formControlName="username">
+                <p class="required" *ngIf="loginForm.controls['username'].errors && loginForm.controls['username'].errors?.['required']">username is required!</p>
+            <br><br>
+            <label for="password">Password: </label>
+            <input name="password" [(ngModel)]="password" type="password" formControlName="password">
+                <p class="required" *ngIf="loginForm.controls['password'].errors && loginForm.controls['password'].errors?.['required']">password is required!</p>
+                <p class="required" *ngIf="credentialsInvalid">Invalid Credentials!</p>
+            <br><br>
+            <div class="middle"><button class="bulu" (click)="onSubmit()">Login</button></div>
+            <br><br>
+        </div>
+        </div>
+    </form>
+
+
+</div>
+<!-- <app-book-ride (onOfferingRide)="offeredARide($event)" class="pad" *ngIf="isAuthenticated && !offeringRide && bookingRide"></app-book-ride>
+<app-offer-ride (addedRide)="onAddingRide($event)" class="pad"  *ngIf="isAuthenticated && offeringRide && !bookingRide"></app-offer-ride> -->

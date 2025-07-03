@@ -1,0 +1,79 @@
+.center{
+    /* text-align: center; */
+    width: 75%; /* Set a width for the div */
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 1%;
+    /* align-items: center; */
+}
+
+.right{
+    /* width: 10%;
+    height: 2%;
+    align-self: right;
+    /* color: white;
+    background-color: blue; */
+    /* text-align: right; */
+   /* cursor: pointer; */
+   color: palevioletred;
+    background-color: rgb(96, 229, 200);
+    cursor: pointer;
+    border: 0cap;
+    border-radius: 2px;
+    float: right;
+}
+
+.pool{
+    padding: 1%;
+    width: 98%;
+    height: 5%;
+    color: palevioletred;
+    background-color: whitesmoke;
+    border: 1%;
+}
+.blue{
+    color: white;
+    background-color: blue;
+    text-align: center;
+    padding: 1%;
+    border-radius: 2%;
+}
+.table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 2%;
+    text-align: center;
+}
+.textcenter{
+    text-align: center;
+}
+
+.pad{
+    padding: 1%;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-margin{
+    margin-right: 1%;
+    padding: 0.5%;
+    border-radius: 6%;
+    background-color: rgb(0, 166, 255);
+    border: 0px;
+}
+
+.bottom-margin{
+    margin-bottom: 1%;
+}
+
+.offrride{
+    cursor: pointer;
+    padding: 0.5%;
+    border-radius: 6%;
+    background-color: rgb(0, 166, 255);
+    border: 0px;
+}

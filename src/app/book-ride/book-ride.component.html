@@ -1,0 +1,58 @@
+<div class="pool"><nav>PoolCarZ  <button class="right"  (click)="logout()">Logout</button></nav></div>
+    <br><br>
+<div class="center">    
+    <div class="blue">
+        Book a ride
+    </div>
+    <br>
+    <p style="padding: 1%;" class="textcenter">PoolCarZ is an online application which enables users to share rides with others. You can either book a ride or offer a ride. Did we mention that this app is advertisement free ? To add on top of that its free of cost ! So what are you waiting for ? Check out the rides available and start PCing!! </p>
+    <br><br>
+    <div class="middle">
+    <button class="right-margin" [appMouseHover]="lg" (click)="table()">Show all rides</button><button *ngIf="isTable" [appMouseHover]="lg" class="right-margin" (click)="toOffice()">To Office</button><button *ngIf="isTable" [appMouseHover]="lg" class="right-margin" (click)="fromOffice()">From Office</button><button *ngIf="isTable" [appMouseHover]="lg" class="right-margin" (click)="Others()">Others</button>
+    </div>
+    <br><div class="middle" style="color: rgb(0, 102, 0);" *ngIf="isTable"> Please select a ride</div><br>
+    <div class="middle" *ngIf="isTable">
+        
+        <table class="table" border="1">
+            <thead class="blue">
+                <tr>
+                    <td>
+                        Start Point
+                    </td>
+                    <td>
+                        End Point
+                    </td>
+                    <td>
+                        Seats Available
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr [appMouseHover]="mycolor"  (click)="rideDetail(ride)" *ngFor="let ride of rides | rideFilter: filter; let ind = index">
+                    <td>{{ride.pickUp}}</td><td>{{ride.destination}}</td><td>{{ride.seatsLeft}}</td>
+                </tr>
+                <!-- <tr>
+                    <td>Vanrose Junction</td><td>office</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>PTP</td><td>office</td><td>2</td>
+                </tr>
+                <tr>
+                    <td>office</td>East-Fort<td></td><td>7</td>
+                </tr>
+                <tr>
+                    <td>Office</td><td>Central Mall</td><td>5</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div *ngIf="show" class="middle">
+        @if (selectedR) {
+            <app-ride-details (onBooking)="bookedRide($event)" [warning]="warnMsg" [selectedride]="selectedR"></app-ride-details>
+        }
+    </div>
+    <br>
+    <div class="middle bottom-margin"><button [appMouseHover]="lg" (click)="offeringARide()" class="offrride">offer a ride</button></div>
+    
+</div>

@@ -1,0 +1,61 @@
+.center{
+    /* text-align: center; */
+    width: 50%; /* Set a width for the div */
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 1%;
+    /* align-items: center; */
+}
+.blue{
+    color: white;
+    background-color: blue;
+    text-align: center;
+    padding: 1%;
+}
+.table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 2%;
+    text-align: center;
+}
+.textcenter{
+    text-align: center;
+}
+
+.pad{
+    padding: 3%;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-margin{
+    margin-right: 1%;
+    padding: 0.5%;
+    border-radius: 6%;
+    background-color: rgb(0, 166, 255);
+    border: 0px;
+}
+
+.bottom-margin{
+    margin-bottom: 1%;
+}
+
+.book{
+    padding: 0.5%;
+    border-radius: 6%;
+    background-color: rgb(0, 166, 255);
+    border: 0px;
+    cursor: pointer;
+}
+
+.cancel{
+    padding: 0.5%;
+    border-radius: 6%;
+    background-color: rgb(255, 81, 0);
+    border: 0px;
+    cursor: pointer;
+}
